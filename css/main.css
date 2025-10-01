@@ -1,12 +1,10 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #000;
-    /* color: #fff; */
+    font-family: 'inter',sans-serif;
 }
 
 header{
-    background: #111;
+    background: #000;
     color: #f2f2f2;
     text-align: center;
     padding: 20px;
@@ -14,13 +12,17 @@ header{
 
 .container{
     display: flex;
+    justify-content: center;
     min-height: 80vh;
+    margin: 0 80px;
 }
 
 nav{
-    width: 30%;
-    background: #222;
-    padding: 20px;
+    width: 25%;
+    padding: 20px 30px;
+    position: sticky; 
+    top: 0;
+    height: fit-content;
 }
 
 nav ul{
@@ -29,28 +31,139 @@ nav ul{
 }
 
 nav ul li{
-    margin: 15px 0;
+    padding: 10px 20px;
+    border-left: 1px solid #ccc;
+}
+
+nav ul li:hover{
+    border-left: 5px solid #ffcc00;
+}
+
+nav ul li:hover > a{
+    color: #ffcc00;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: #000;
+    display: block;
 }
-
-nav ul li a:hover{
+.active-link{
+    border-left: 5px solid #ffcc00;
+}
+.active-link > a{
     color: #ffcc00;
 }
 
 main{
-    width: 70%;
+    width: 75%;
     padding: 20px;
     background: #ffffff;
 }
 
 footer{
-    background: #222;
+    background: #000;
     color: #ccc;
     text-align: center;
     padding: 10px;
+}
+
+.footer-container{
+    margin: auto 80px;
+    padding-top: 40px;
+}
+
+
+footer li{
+    list-style-type: none;
+}
+
+footer svg{
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+}
+
+.footer-details{
+    display: flex;
+}
+
+/* footer navigation */
+
+.footer-navigate{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+} 
+
+.footer-navigate ul{
+    padding: 0;
+}
+
+.footer-navigate li {
+    padding: 10px 20px;
+    text-align: start;
+}
+
+.footer-navigate li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-navigate li a:hover{
+    color: #ffcc00;
+}
+
+/* footer contact */
+.footer-contact{
+    width: 25%;
+}
+
+.footer-contact_icon a{    
+    background-color: #2e2e32;
+    border-radius: 50%;
+    height: 32px;
+    justify-content: center;
+    margin: 0 12px 0 0;
+    width: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact_icon{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 0;
+}
+
+/* footer slogan */
+.footer-slogan{
+    width: 30%;
+} 
+
+.footer-slogan_container{
+    max-width: 200px;
+    margin: auto;
+}
+
+.footer-slogan .logo{
+    width: 150px;
+}
+
+.footer-slogan .slogan{
+    border-radius: 8px;
+    width: 150px;
+}
+
+.footer-copywright{
+    border-top: 1px solid #fff;
+    margin-top: 24px;
+}
+@media only screen and (min-width: 1600px) {
+    .container, .footer-container{
+        width: 1600px;
+        margin: auto;
+    }
 }
