@@ -6,8 +6,70 @@ body{
 header{
     background: #000;
     color: #f2f2f2;
+    /* padding: 20px; */
+}
+.header-container{
+    padding: 16px 80px;
+    display: flex;
+}
+
+.header-slogan, .header-logo, .header-blank{
+    width: 33.33%;
+}
+
+.header-slogan {
+    display: flex;
+    align-items: center;   /* Centers items vertically */
+    gap: 10px;  
+}
+
+.header-slogan > span{
+    
+}
+
+.header-slogan img{
+    width: 100px;
+    border-radius: 8px;
+}
+
+.header-banner{
+    height: 600px;
+    position: relative;
+}
+
+.header-title{
+    display: flex;
+    margin: 250px 80px 20px;
+}
+
+.header-title-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header-title_details{
+
+}
+
+.header-title_h1{
+    width: 500px;
+    /* margin: auto; */
+}
+
+.header-title h1{
+    font-size: 80px;
+    margin: 20px 0;
+}
+
+.header-logo{
     text-align: center;
-    padding: 20px;
+}
+.header-logo img{
+    width: 60px;
+    text-align: center;
 }
 
 .container{
@@ -162,8 +224,13 @@ footer svg{
     margin-top: 24px;
 }
 @media only screen and (min-width: 1600px) {
-    .container, .footer-container{
+    .container, 
+    .footer-container, 
+    .header-container,
+    .header-title_details,
+    #body-container{
         width: 1600px;
         margin: auto;
     }
+
 }
