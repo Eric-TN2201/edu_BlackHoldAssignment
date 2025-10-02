@@ -227,9 +227,17 @@ footer svg{
 section{
     padding: 8px 0;
 }
+
+section ul li{
+    margin-bottom: 16px;
+}
+
+section ol li{
+    margin-bottom: 16px;
+}
 /*  */
 .black-hole-categories li{
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 
 .black-hole-categories li a {
