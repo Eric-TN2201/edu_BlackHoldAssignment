@@ -223,6 +223,50 @@ footer svg{
     border-top: 1px solid #fff;
     margin-top: 24px;
 }
+
+section{
+    padding: 8px 0;
+}
+/*  */
+.black-hole-categories li{
+    margin-bottom: 8px;
+}
+
+.black-hole-categories li a {
+    text-decoration: none;
+}
+
+.black-hole-categories li a:visited {
+    color: unset;
+}
+
+.black-hole-categories li a:hover {
+    color: #ffcc00;
+}
+
+
+.image-blackhole{
+    width: 80%;
+    /* max-height: 500px; */
+    margin: 24px auto;
+}
+
+.image-blackhole img{
+    width: 100%;
+    max-height: 400px;
+}
+
+.image-credits{
+    font-size: .75rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #000;
+}
+
+.image-credits_description{
+    color: #58585b;
+}
+
 @media only screen and (min-width: 1600px) {
     .container, 
     .footer-container, 
