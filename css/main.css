@@ -62,6 +62,7 @@ header{
 .header-title h1{
     font-size: 80px;
     margin: 20px 0;
+    text-transform: capitalize;
 }
 
 .header-logo{
@@ -277,160 +278,202 @@ section ol li{
 }
 
 /* History */
-.timeline {
-        position: relative;
-        max-width: 850px;
-        margin: auto;
+    .timeline {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+        }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        background-color: #282929;
+        top: 0;
+        bottom: 0;
+        margin-left: 136px;
     }
 
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 3px;
-    background-color: #282929;
-    top: 0;
-    bottom: 0;
-    margin-left: 136px;
-}
+    .timeline-item {
+        position: relative;
+        left: -52px;
+        padding: 20px;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
 
-.timeline-item {
-    position: relative;
-    left: -52px;
-    padding: 20px;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: space-between;
-}
+    .timeline-item:nth-child(odd) {}
 
-.timeline-item:nth-child(odd) {}
+    .timeline-item:nth-child(even) {}
 
-.timeline-item:nth-child(even) {}
+    .timeline-dot {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
 
-.timeline-dot {
-    margin-left: 24px;
-    margin-right: 24px;
-}
+    .timeline-date {
+        width: 120px;
+        padding: 0 12px;
+        color: #1f2833;
+        font-weight: bold;
+    }
 
-.timeline-date {
-    width: 120px;
-    padding: 0 12px;
-    color: #1f2833;
-    font-weight: bold;
-}
+    .timeline-content {
+        width: 350px;
+        padding: 0 8px;
+    }
 
-.timeline-content {
-    width: 350px;
-    padding: 0 8px;
-}
+    .timeline-content h2 {
+        margin-top: unset;
+    }
 
-.timeline-content h2 {
-    margin-top: unset;
-}
+    .timeline-dot {
+        margin-top: 4px;
+        width: 12px;
+        height: 12px;
+        background-color: #000000;
+        border-radius: 100%;
+        z-index: 1;
+    }
 
-.timeline-dot {
-    margin-top: 4px;
-    width: 12px;
-    height: 12px;
-    background-color: #000000;
-    border-radius: 100%;
-    z-index: 1;
-}
+    .timeline-dot .dot {
+        padding: 8px;
+    }
 
-.timeline-dot .dot {
-    padding: 8px;
-}
+    .timeline-author {
+        display: flex;
+        margin-left: 20px;
+        width: 250px;
+        height: 200px;
+    }
 
-.timeline-author {
-    display: flex;
-    margin-left: 20px;
-    width: 250px;
-    height: 200px;
-}
+    .timeline-author_details {
+        color: #58585b;
+        text-align: center;
+        font-size: 14px;
+    }
 
-.timeline-author_details {
-    color: #58585b;
-    text-align: center;
-    font-size: 14px;
-}
-
-.timeline-author img {
-    width: 100px;
-    height: 130px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    padding: 4px;
-    margin-right: 4px;
-}
+    .timeline-author img {
+        width: 100px;
+        height: 130px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 4px;
+        margin-right: 4px;
+    }
 
 /* Famous page */
-.famous-item-container {}
+    .famous-item-container {}
 
-.famous-item:nth-child(odd) {}
+    .famous-item:nth-child(odd) {}
 
-.famous-item:nth-child(even) {
+    .famous-item:nth-child(even) {
 
-    flex-direction: row-reverse;
-}
+        flex-direction: row-reverse;
+    }
 
-.famous-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 20px;
-    height: 350px;
-}
+    .famous-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 20px;
+        height: 350px;
+    }
 
-.fi-information h3 {
-    margin: 8px 0;
-    text-align: center;
-}
+    .fi-information h3 {
+        margin: 8px 0;
+        text-align: center;
+    }
 
-.fi-information ul {
-    margin: 8px 0;
-    padding-left: 20px;
-    font-size: 14px;
-}
+    .fi-information ul {
+        margin: 8px 0;
+        padding-left: 20px;
+        font-size: 14px;
+    }
 
-.fi-information {
-    padding: 8px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
+    .fi-information {
+        padding: 8px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
 
-.fi-information-container {
-    width: 45%;
-    margin: auto 0;
-}
+    .fi-information-container {
+        width: 45%;
+        margin: auto 0;
+    }
 
-.fi-image {
-    width: 50%;
-}
+    .fi-image {
+        width: 50%;
+    }
 
-.fi-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    padding: 4px;
-}
+    .fi-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 4px;
+    }
 
-.external-link {
-    background-color: #ffcc00;
-    color: #fff;
-    padding: 12px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    width: fit-content;
-    margin: 0 auto;
-}
+    .external-link {
+        background-color: #ffcc00;
+        color: #fff;
+        padding: 12px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        width: fit-content;
+        margin: 0 auto;
+    }
 
-.external-link:hover {
-    opacity: .7;
-}
+    .external-link:hover {
+        opacity: .7;
+    }
 
+/* How it form */
+    .how-they-form .lead {
+        padding: 20px;
+    }
+
+    .formation-section {
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+
+    .formation-section figure {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .formation-section img {
+        width: 100%;
+        height: 500px;
+        border-radius: 8px;
+    }
+
+    .formation-section figcaption {
+        font-size: 0.9rem;
+        color: #58585b;
+        margin-top: 8px;
+    }
+
+    .faq {
+
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .faq h3 {
+        color: #d91b1b;
+        margin-top: unset;
+    }
+
+    .faq p {
+        margin-bottom: 15px;
+    }
 @media only screen and (min-width: 1600px) {
     .container, 
     .footer-container, 
