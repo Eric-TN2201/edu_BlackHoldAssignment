@@ -442,7 +442,7 @@ section ol li{
         padding: 0 20px;
     }
 
-    .formation-section figure {
+    figure {
         margin: 20px 0;
         text-align: center;
     }
@@ -453,7 +453,7 @@ section ol li{
         border-radius: 8px;
     }
 
-    .formation-section figcaption {
+    figcaption {
         font-size: 0.9rem;
         color: #58585b;
         margin-top: 8px;
