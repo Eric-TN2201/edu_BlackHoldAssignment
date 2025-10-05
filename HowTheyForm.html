@@ -39,23 +39,36 @@
     </header>
     <div class="container">
         <nav>
-            <ul>
+            <ul class="menu">
                 <li><a href="./Main.html">Home</a></li>
-                <li><a href="./History.html">History</a></li>
-                <li><a href="./Types.html">Types</a></li>
-                <li class="active-link"><a href="./HowTheyForm.html">How They Form</a></li>
-                <li><a href="./Mysteries.html">Mysteries</a></li>
-                <li><a href="./FamousBlackHole.html">Famous Black Holes</a></li>
+                <li class="active-link">
+                    <a href="./History.html">History</a>
+                    <ul class="sub-menu">
+                        <li class="sub-link active-link"><a href="./HowTheyForm.html">How They Form</a></li>
+                        <li class="sub-link"><a href="./Mysteries.html">Mysteries</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./Types.html">Types</a>
+                    <ul class="sub-menu">
+                        <li class="sub-link"><a href="./FamousBlackHole.html">Famous Black Holes</a></li>
+                    </ul>
+                </li>
                 <li><a href="./News.html">News</a></li>
                 <li><a href="./Contact.html">Contact</a></li>
-                <li><a href="./References.html">References</a></li>
-                <li><a href="./MetaPage.html">MetaPage</a></li>
+
+                <li>
+                    <a href="./MetaPage.html">MetaPage</a>
+                    <ul class="sub-menu">
+                        <li class="sub-link"><a href="./References.html">References</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <main>
             <section id="how-they-form" class="how-they-form">
                 <h2>How Black Holes Form</h2>
-
+                <button onclick="openPopup()">Learn More About Black Holes</button>
                 <p class="lead">
                     Black holes are born through a few different paths depending on mass, environment, and cosmic
                     time. Key formation channels include <strong>stellar collapse, direct collapse of gas, mergers &
@@ -220,8 +233,21 @@
                 <p>Copyright 2025 &copy; Nguyen Trong Nghia | Student ID: U3281913</p>
             </div>
         </div>
-
     </footer>
+    <script>
+        function openPopup() {
+            const popup = window.open(
+                "https://en.wikipedia.org/wiki/Black_hole",   // the page to open
+                "BlackHoleInfo",                              // name of popup window
+                "width=800,height=600,scrollbars=yes,resizable=no"
+            );
+            if (popup) {
+                alert("Opening a new window about Black Holes!");
+            } else {
+                alert("Please allow pop-ups in your browser to see this content.");
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -98,11 +98,12 @@ nav ul{
 }
 
 nav ul li{
-    padding: 10px 20px;
+    padding: 10px 16px;
     border-left: 1px solid #ccc;
 }
 
-nav ul li:hover{
+nav ul li:hover,
+.sub-link.active-link:hover{
     border-left: 5px solid #ffcc00;
 }
 
@@ -115,6 +116,20 @@ nav ul li a{
     color: #000;
     display: block;
 }
+.menu>li{
+   font-weight: bold;
+}
+.sub-menu>li{
+    font-weight: normal;
+}
+.sub-menu{
+    margin-top: 8px;
+}
+.sub-link.active-link,
+.sub-link{
+    border-left: unset;
+}
+
 .active-link{
     border-left: 5px solid #ffcc00;
 }
