@@ -162,6 +162,8 @@ footer svg{
     width: 45%;
     display: flex;
     justify-content: space-around;
+    border-left: 1px solid;
+    border-right: 1px solid;
 } 
 
 .footer-navigate ul{
