@@ -7,6 +7,91 @@
     <title>Black Hole - Contact</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/ref.css">
+    <style>
+        main {
+            padding: unset;
+        }
+
+        .contact-container {
+            display: flex;
+        }
+
+        .contact-form {
+            width: 60%;
+            padding: 12px 24px;
+        }
+
+        .contact-details {
+            margin-bottom: 36px;
+        }
+
+        .contact-bg {
+            width: 40%;
+            height: 100vh;
+        }
+
+        form {
+            box-sizing: border-box;
+            max-width: 500px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            resize: none;
+        }
+
+        .input-form {
+            padding: 0 24px;
+        }
+
+        .name-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .name-group input {
+            flex: 1;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .require-input {
+            font-size: 13px;
+            color: #c1121f;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +113,7 @@
                 <div class="header-title_details">
                     <div class="header-title">
                         <div class="header-title_h1">
-                            <h1>Black Hole Types</h1>
+                            <h1>Contact</h1>
                         </div>
                         <div class="header-title_blank">
 
@@ -54,32 +139,57 @@
             </ul>
         </nav>
         <main>
-            <h2>Contact</h2>
-            <ol>
-                <li><a
-                        href="https://blackholes.stardate.org./History.html">https://blackholes.stardate.org./History.html</a>
-                </li>
-                <li><a href="https://eventhorizontelescope.org/">https://eventhorizontelescope.org/</a></li>
-                <li><a href="https://www.blackholeexplorer.org/">https://www.blackholeexplorer.org/</a></li>
-                <li><a
-                        href="https://www.cfa.harvard.edu/research/topic/black-holes">https://www.cfa.harvard.edu/research/topic/black-holes</a>
-                </li>
-                <li><a
-                        href="https://science.nasa.gov/universe/overview/building-blocks/">https://science.nasa.gov/universe/overview/building-blocks/</a>
-                </li>
-                <li><a href="https://en.wikipedia.org/wiki/Black_hole">kiwipedia</a></li>
-                <li><a href="https://www.space.com/15421-black-holes-facts-formation-discovery-sdcmp.html">space.com</a>
-                </li>
-                <li><a href="https://science.nasa.gov/astrophysics/focus-areas/black-holes/stories/">Nasa - Black Hole
-                        Stories</a></li>
-            </ol>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusantium pariatur!
-                Doloribus
-                accusamus, sed vel soluta vero sit aspernatur fugit repudiandae optio dolores exercitationem itaque,
-                ullam
-                maxime incidunt ipsum!</p>
+            <div class="contact-container">
+                <div class="contact-bg">
+                    <video autoplay loop muted plays-inline
+                        style="width: 100%; height: 100%; position: relative; left: -39px;">
+                        <source src="./images/common/blackhole-contact-bg.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="contact-form">
+                    <div class="contact-details">
+                        <h3>Contact us to know more informations</h3>
+                        <p><strong>Name:</strong> Nguyen Trong Nghia</p>
+                        <p><strong>ID:</strong> u3281913</p>
+                    </div>
 
-        </main>
+                    <h3>Your personal details</h3>
+                    <form id="contactForm">
+                        <div class="input-form">
+                            <div class="name-group">
+                                <div>
+                                    <label for="firstName">First Name <span
+                                            class="require-input">(required)</span></label>
+                                    <input type="text" id="firstName" required>
+                                </div>
+                                <div>
+                                    <label for="lastName">Last Name <span
+                                            class="require-input">(required)</span></label>
+                                    <input type="text" id="lastName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-form">
+                            <label for="email">Email <span class="require-input">(required)</span></label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="input-form">
+                            <label for="subject">Subject <span class="require-input">(required)</span></label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="input-form">
+                            <label for="message">Message <span class="require-input">(required)</span></label>
+                            <textarea id="message" rows="4" required></textarea>
+                        </div>
+                        <div class="input-form">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+    </main>
     </div>
     <footer>
         <div class="footer-container">
@@ -156,8 +266,30 @@
                 <p>Copyright 2025 &copy; Nguyen Trong Nghia | Student ID: U3281913</p>
             </div>
         </div>
-
     </footer>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // stop page reload
+
+            // get input values
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            // show alert
+            alert(
+                "Form Submitted!\n\n" +
+                "Name: " + firstName + " " + lastName + "\n" +
+                "Email: " + email + "\n" +
+                "Subject: " + subject + "\n" +
+                "Message: " + message
+            );
+        });
+    </script>
 </body>
 
 </html>
